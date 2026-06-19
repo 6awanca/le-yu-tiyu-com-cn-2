@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>乐鱼体育 · 信息索引页面</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f6f0;
+      font-family: "Noto Serif SC", "Source Han Serif SC", "STSong", "Georgia", serif;
+      color: #2d2a24;
+      line-height: 1.75;
+      padding: 2rem 1.25rem;
+    }
+
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fefcf8;
+      padding: 2.8rem 2.2rem;
+      border-radius: 24px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 3rem;
+      border-bottom: 1px solid #e2dcd0;
+      padding-bottom: 1.8rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #3e352b;
+    }
+
+    .hero .subhead {
+      margin-top: 0.6rem;
+      color: #7a7062;
+      font-size: 1rem;
+      font-style: italic;
+      max-width: 80%;
+    }
+
+    /* 正文区域 */
+    .section {
+      margin-bottom: 2.4rem;
+    }
+
+    .section h2 {
+      font-weight: 500;
+      font-size: 1.35rem;
+      border-left: 5px solid #c6b59a;
+      padding-left: 1rem;
+      margin-bottom: 1.2rem;
+      color: #4a3f32;
+    }
+
+    .section p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    /* 引用块 / 提示框 */
+    .callout {
+      background: #f3ede3;
+      border-left: 6px solid #b8a384;
+      padding: 1.2rem 1.6rem;
+      border-radius: 0 14px 14px 0;
+      margin: 1.6rem 0;
+      color: #3d362c;
+      font-size: 0.98rem;
+    }
+
+    .callout strong {
+      font-weight: 600;
+      color: #3b2e1f;
+    }
+
+    /* 特点卡片网格 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin: 1.4rem 0 1.8rem;
+    }
+
+    .feature-card {
+      background: #fcf9f4;
+      border: 1px solid #e6ddd0;
+      padding: 1rem 1.2rem;
+      border-radius: 18px;
+      transition: background 0.15s;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: #3f362b;
+    }
+
+    .feature-card p {
+      font-size: 0.92rem;
+      color: #5c5347;
+      margin-bottom: 0;
+    }
+
+    /* FAQ 摘要 */
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px dashed #ddd6c9;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #4e4235;
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-a {
+      color: #5e5546;
+      font-size: 0.95rem;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      margin-top: 3rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid #ded7ca;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #7a6f5e;
+    }
+
+    .footer-links a {
+      color: #685c49;
+      text-decoration: none;
+      border-bottom: 1px solid #c5b8a5;
+      padding-bottom: 1px;
+      transition: border-color 0.15s;
+    }
+
+    .footer-links a:hover {
+      border-bottom-color: #4a3f2f;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .page-wrap {
+        padding: 1.8rem 1.2rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .hero .subhead {
+        max-width: 100%;
+        font-size: 0.92rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- hero 区 -->
+  <div class="hero">
+    <h1>乐鱼体育 · 日常参照笔记</h1>
+    <div class="subhead">从一个查询入口出发，整理信息、对照特点、延展理解。</div>
+  </div>
+
+  <!-- 说明区：日常查询与对照 -->
+  <div class="section">
+    <h2>从一次查询说起</h2>
+    <p>前几天在整理体育资讯的索引时，随手搜到一个持续更新的信息源——<a href="https://le-yu-tiyu.com.cn">乐鱼体育</a>。它的页面结构比较干净，信息分类也清晰，适合作为日常对照和延伸阅读的起点。我把它当作一个基础参照，顺手做了些笔记。</p>
+    <p>这类平台通常会聚合多个维度的内容：赛事动态、队伍数据、赛程预告等。如果你也喜欢边查边记，那么一个结构稳定的页面会省去不少反复寻找的功夫。</p>
+  </div>
+
+  <!-- 优势区 -->
+  <div class="section">
+    <h2>特点 · 随手记</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>条目式布局</h3>
+        <p>信息以条目和短段落排布，方便快速扫读，也适合对照自己整理的要点。</p>
+      </div>
+      <div class="feature-card">
+        <h3>分类相对固定</h3>
+        <p>每个板块有明确的标题层级，不用频繁适应新结构，查阅效率稳定。</p>
+      </div>
+      <div class="feature-card">
+        <h3>更新频率适中</h3>
+        <p>内容会随着赛事周期调整，不会过度堆积过时信息，对日常浏览比较友好。</p>
+      </div>
+      <div class="feature-card">
+        <h3>视觉干扰少</h3>
+        <p>配色和排版偏向朴素，没有过多动态元素，阅读时注意力不容易被分散。</p>
+      </div>
+    </div>
+    <div class="callout">
+      <strong>一点使用感受：</strong> 如果只是想要一个不喧哗的体育信息集合页，<a href="https://le-yu-tiyu.com.cn">乐鱼体育</a> 可以作为日常书签栏里的一个稳定参照。它不会刻意引导点击，更像一个按部就班的公告板。
+    </div>
+  </div>
+
+  <!-- 说明区：延伸阅读场景 -->
+  <div class="section">
+    <h2>延伸阅读的小场景</h2>
+    <p>有时候写运动相关的随笔，需要快速确认某个赛事的常规时间或队伍简称，我就会打开乐鱼体育的页面，对照一下条目描述，再回到自己的文档里继续写。这种“打开 - 对照 - 关闭”的流程很轻量，不需要登录或者注册，也不会跳转到无关页面。</p>
+    <p>另外，如果你习惯在周末花半小时浏览体育类信息，用它作为一个起点也还算省力。信息密度刚好，不会让人产生信息过载的疲惫感。</p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="section">
+    <h2>常见疑问摘要</h2>
+    <div class="faq-item">
+      <div class="faq-q">Q：页面内容是否经常变动？</div>
+      <div class="faq-a">A：首页的框架基本稳定，条目内容会随赛程更新，变动幅度在合理范围内。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：需要注册或下载额外插件吗？</div>
+      <div class="faq-a">A：不需要，直接通过浏览器打开即可浏览所有公开内容。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q：适合作为资讯核对参考吗？</div>
+      <div class="faq-a">A：可以作为多个对照源之一，建议结合其他信息渠道交叉确认关键数据。</div>
+    </div>
+  </div>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <p>本站为个人整理的静态介绍页，仅供信息索引之用。主要参照来源：<a href="https://le-yu-tiyu.com.cn">乐鱼体育</a> · 内容无诱导表述。</p>
+  </div>
+</div>
+</body>
+</html>
