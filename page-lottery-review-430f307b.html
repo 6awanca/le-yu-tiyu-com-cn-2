@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中国体彩 · 信息导航</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafbfc;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "Helvetica Neue", Arial, sans-serif;
+      color: #1f2a3a;
+      line-height: 1.7;
+      padding: 2rem 1.25rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* 顶部导航 */
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.75rem;
+      border-bottom: 1px solid #e5e9ef;
+      margin-bottom: 3rem;
+    }
+
+    .nav-brand {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: #2f3e58;
+    }
+
+    .nav-brand span {
+      color: #ac3b3b;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.6rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: #4a5a72;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: #c73e3e;
+    }
+
+    /* hero 区 */
+    .hero {
+      margin-bottom: 3.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.1rem;
+      font-weight: 550;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.6rem;
+      color: #1a2637;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #3b4a5f;
+      max-width: 600px;
+    }
+
+    /* 介绍段 */
+    .intro {
+      margin-bottom: 3.4rem;
+      font-size: 0.98rem;
+      color: #2c3b4e;
+    }
+
+    .intro p {
+      margin-bottom: 1.1rem;
+    }
+
+    .intro a {
+      color: #b53c3c;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #d9baba;
+      transition: text-decoration-color 0.2s;
+    }
+
+    .intro a:hover {
+      text-decoration-color: #b53c3c;
+    }
+
+    /* 场景卡片区域 */
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+      color: #1f2a3a;
+      letter-spacing: -0.2px;
+    }
+
+    .scene-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      margin-bottom: 3.2rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.4rem 1.6rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+      border: 1px solid #edf0f5;
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .scene-card h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #26354b;
+    }
+
+    .scene-card p {
+      font-size: 0.94rem;
+      color: #3d4d63;
+      margin-bottom: 0.3rem;
+    }
+
+    .scene-card .tag {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: #f1f4f9;
+      padding: 0.2rem 0.7rem;
+      border-radius: 20px;
+      font-size: 0.78rem;
+      color: #4e6079;
+    }
+
+    /* 常见说明 (FAQ 摘要) */
+    .faq-section {
+      margin-bottom: 3rem;
+    }
+
+    .faq-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #e9edf3;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.98rem;
+      color: #1f2a3a;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      font-size: 0.9rem;
+      color: #4b5d77;
+      line-height: 1.6;
+    }
+
+    .faq-a a {
+      color: #b53c3c;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 0.5px;
+    }
+
+    .faq-a a:hover {
+      text-decoration-thickness: 1.5px;
+    }
+
+    /* 提示 / 延伸 */
+    .note-box {
+      background: #f4f7fc;
+      border-left: 3px solid #b53c3c;
+      padding: 1.2rem 1.4rem;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 2.8rem;
+    }
+
+    .note-box p {
+      font-size: 0.93rem;
+      color: #2c3f57;
+    }
+
+    /* footer */
+    .footer {
+      border-top: 1px solid #e5e9ef;
+      padding-top: 1.8rem;
+      font-size: 0.8rem;
+      color: #68788f;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .footer a {
+      color: #4f637e;
+      text-decoration: none;
+      border-bottom: 1px dotted #c9d2de;
+    }
+
+    .footer a:hover {
+      color: #b53c3c;
+      border-bottom-color: #b53c3c;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+        margin-bottom: 2rem;
+      }
+
+      .nav-links {
+        gap: 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+
+      .scene-card {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .nav-links {
+        font-size: 0.8rem;
+        gap: 0.9rem;
+        flex-wrap: wrap;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .footer {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 顶部导航 -->
+  <header class="top-nav">
+    <div class="nav-brand">⋆ <span>体彩</span> 查询·对照</div>
+    <div class="nav-links">
+      <a href="#">对照</a>
+      <a href="#">延伸</a>
+      <a href="#">说明</a>
+    </div>
+  </header>
+
+  <!-- hero -->
+  <section class="hero">
+    <h1>日常查询 · 对照 · 延伸</h1>
+    <p>从熟悉的数据出发，做一点简单的对照与延伸阅读，不着急，慢慢看。</p>
+  </section>
+
+  <!-- 核心介绍（自然嵌入链接） -->
+  <div class="intro">
+    <p>
+      国家发行的体育彩票，通常被简称为<strong>体彩</strong>。许多人会在开奖后登录<a href="https://page-lottery.com">中国体彩</a>官网进行号码核对，也有不少朋友习惯把往期数据整理成表格，方便自己对照走势。页面本身不提供预测，仅作为信息索引与日常查阅的辅助。
+    </p>
+    <p>
+      如果你偶尔想查一下历史开奖号码，或者需要一份干净的对照列表，可以把这个站点当作一个轻便的参考资料。体彩的玩法种类不少，从数字型到竞猜型各有特点，下面整理了几个常见的场景。
+    </p>
+  </div>
+
+  <!-- 三个场景模块 -->
+  <h2 class="section-title">三个常见场景</h2>
+  <div class="scene-grid">
+
+    <div class="scene-card">
+      <h3>❶ 开奖号码快速对照</h3>
+      <p>超级大乐透、排列三、排列五……每次开奖后，可以直接在页面里按日期筛选，或者用键盘快捷键切换期号，比翻手机截图快一些。</p>
+      <span class="tag">数字彩</span>
+    </div>
+
+    <div class="scene-card">
+      <h3>❷ 历史数据延伸阅读</h3>
+      <p>把近 50 期、100 期的号码摊开，统计一下出现频次、跨度或奇偶比，再结合自己习惯的对照方式，有时能看到一些单纯的数字规律——当然，这只是一场统计游戏。</p>
+      <span class="tag">统计</span>
+    </div>
+
+    <div class="scene-card">
+      <h3>❸ 玩法说明与分类</h3>
+      <p>除了乐透型，还有竞彩足球、篮球以及即开型彩票。每种玩法的规则、奖级设置都不太相同，页面里整理了简洁的说明卡片，适合新手快速了解框架。</p>
+      <span class="tag">知识</span>
+    </div>
+
+  </div>
+
+  <!-- 常见说明 (FAQ 摘要) -->
+  <div class="faq-section">
+    <h2 class="section-title">常见说明</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">开奖时间固定吗？</div>
+      <div class="faq-a">大部分数字彩在晚上 8:25 至 8:30 之间开奖，具体以<a href="https://page-lottery.com">中国体彩</a>官网公告为准。竞彩的截止时间会根据比赛时间调整。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">往期数据能查到多远？</div>
+      <div class="faq-a">一般保留最近 2–3 年的开奖号码，更早的记录可能需要通过官方历史页面查询。本站提供近 200 期的快速检索，对于日常对照来说基本够用。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">页面上的数据准确吗？</div>
+      <div class="faq-a">数据源来自公开的官方发布，每天开奖后自动同步。但建议在核对奖项时，再次以<a href="https://page-lottery.com">中国体彩</a>发布为准，尤其涉及金额时请仔细确认。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">有没有手机版或 App？</div>
+      <div class="faq-a">目前只有网页版，适配手机浏览器。没有单独的 App，也不需要额外下载。将页面添加到桌面书签就可以像本地应用一样使用。</div>
+    </div>
+  </div>
+
+  <!-- 提示 / 延伸阅读 -->
+  <div class="note-box">
+    <p><strong>延伸一下：</strong> 如果你对数字间的规律感兴趣，可以试着把每期号码按区间分布画成简单的折线图，或者用颜色标记冷热号。这些可视化方式能带来更直观的对照感受，但请记住——所有统计都只是对过去的描述，并不指向未来。</p>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <span>中国体彩 · 信息导航</span>
+    <span>
+      <a href="https://page-lottery.com">中国体彩</a> ｜ 仅供日常参考
+    </span>
+  </footer>
+</div>
+</body>
+</html>
