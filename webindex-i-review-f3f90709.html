@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 信息卡介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9fafb;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-wrap {
+      max-width: 760px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* hero 区域 */
+    .hero {
+      margin-bottom: 3.5rem;
+      text-align: left;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 550;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: #111827;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #4b5563;
+      border-left: 4px solid #3b82f6;
+      padding-left: 1rem;
+      background: #f0f4fe;
+      display: inline-block;
+      border-radius: 0 8px 8px 0;
+      padding: 0.5rem 1rem 0.5rem 1.2rem;
+    }
+
+    .hero .desc {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      color: #374151;
+      max-width: 680px;
+    }
+
+    /* 信息卡片网格 */
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.8rem 2rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
+      border: 1px solid #edf2f7;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #0a1628;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 24px;
+      background: #3b82f6;
+      border-radius: 4px;
+    }
+
+    .card p, .card li {
+      font-size: 0.98rem;
+      color: #2d3748;
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 0.7rem;
+    }
+
+    .card ul li {
+      padding: 0.4rem 0 0.4rem 1.6rem;
+      position: relative;
+    }
+
+    .card ul li::before {
+      content: "·";
+      font-weight: 700;
+      font-size: 1.4rem;
+      position: absolute;
+      left: 0.2rem;
+      color: #3b82f6;
+    }
+
+    .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.8rem;
+      margin: 1rem 0 0.2rem;
+    }
+
+    .tag {
+      background: #eef3fc;
+      color: #1e3a6b;
+      font-size: 0.85rem;
+      padding: 0.2rem 1rem;
+      border-radius: 40px;
+      letter-spacing: 0.01em;
+    }
+
+    /* 自然链接段落 */
+    .link-section {
+      margin: 1.5rem 0 3rem 0;
+      padding: 1.8rem 0;
+      border-top: 1px solid #e5e9f0;
+      border-bottom: 1px solid #e5e9f0;
+    }
+
+    .link-section p {
+      font-size: 1rem;
+      color: #2d3748;
+    }
+
+    .link-section a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #bdd3ff;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .link-section a:hover {
+      color: #1d4ed8;
+      border-bottom-color: #1d4ed8;
+    }
+
+    /* FAQ 摘要 */
+    .faq-mini {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      padding: 1rem 0;
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .faq-item:last-of-type {
+      border-bottom: 0;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #111827;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-a {
+      font-size: 0.93rem;
+      color: #4b5563;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      font-size: 0.85rem;
+      color: #6b7a8f;
+      text-align: left;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 550px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .hero .sub {
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem 0.4rem 1rem;
+      }
+      .tag {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrap">
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏 · 发现值得投入的时光</h1>
+    <div class="sub">从轻量益智到沉浸叙事，总有一种乐趣适合你</div>
+    <p class="desc">
+      游戏不是消磨时间的替代品，而是一种可以主动选择的沉浸体验。这里整理了一批真正有想法、有玩味的作品，帮你快速找到对胃口的那个世界。
+    </p>
+  </div>
+
+  <!-- 信息卡片：主视觉 + 用途 + 适合人群 -->
+  <div class="card-grid">
+    <!-- 主视觉卡片 -->
+    <div class="card">
+      <h2>主视觉 · 每一帧都是风格</h2>
+      <p>许多独立作品与中型工作室的视觉语言比电影更自由——像素复古、水墨渲染、低多边形、手绘笔触。以下方向值得留意：</p>
+      <div class="tag-group">
+        <span class="tag">像素叙事</span>
+        <span class="tag">水彩风</span>
+        <span class="tag">极简几何</span>
+        <span class="tag">手绘角色</span>
+        <span class="tag">3D 低面</span>
+      </div>
+      <p style="margin-top: 0.8rem;">视觉不是外壳，而是语汇。一个游戏如何「看」，决定了你如何进入它的世界。</p>
+    </div>
+
+    <!-- 用途卡片 -->
+    <div class="card">
+      <h2>用途 · 不只一种打开方式</h2>
+      <ul>
+        <li><strong>碎片解压</strong> —— 一局五分钟，放松又不累</li>
+        <li><strong>叙事沉浸</strong> —— 花几小时读一个互动故事</li>
+        <li><strong>策略烧脑</strong> —— 规划、推理、资源管理</li>
+        <li><strong>创意工坊</strong> —— 建造、编排、表达自我</li>
+        <li><strong>多人联结</strong> —— 合作闯关或默契对战</li>
+      </ul>
+      <p style="margin-top: 1rem;">每一类用途对应不同的节奏与心态，按需选择比盲目跟风更愉快。</p>
+    </div>
+
+    <!-- 适合人群卡片 -->
+    <div class="card">
+      <h2>适合人群</h2>
+      <p><strong>轻度玩家</strong> · 每天只有零散时间，需要低门槛、随时可停的体验。</p>
+      <p style="margin-top: 0.8rem;"><strong>剧情党</strong> · 把游戏当作互动小说，重视人物、氛围、选项分支。</p>
+      <p style="margin-top: 0.8rem;"><strong>休闲探索者</strong> · 不喜欢输赢压力，偏好自由移动、收集、建造。</p>
+      <p style="margin-top: 0.8rem;"><strong>旧作爱好者</strong> · 对复古画风、经典玩法重置或精神续作有天然好感。</p>
+      <p style="margin-top: 1rem;">如果你属于以上任一类型，会在这里找到高匹配度的作品。</p>
+    </div>
+  </div>
+
+  <!-- 自然链接段落 -->
+  <div class="link-section">
+    <p>
+      这份指南围绕<a href="https://webindex-i-game.com.cn">爱游戏</a>的社区观察与玩家推荐整理而来。如果你希望进一步浏览完整目录和每款作品的详细介绍，可以直接访问 <a href="https://webindex-i-game.com.cn">爱游戏</a>，那里聚合了更丰富的分类、评分与短评。
+    </p>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-mini">
+    <div class="faq-item">
+      <div class="faq-q">这些推荐定期更新吗？</div>
+      <div class="faq-a">保持季度刷新，同时会根据新作品口碑与玩家反馈临时补充。最近一次更新在十月。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">有没有手游与 PC 的分类？</div>
+      <div class="faq-a">有的。在 <a href="https://webindex-i-game.com.cn" style="color:#2563eb; text-decoration: underline;">爱游戏</a> 主站中可按平台、标签、时长筛选，方便你找到当前设备上能立刻玩的作品。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">推荐的作品都免费吗？</div>
+      <div class="faq-a">包括免费、买断制与部分订阅制作品。每张卡片会标注获取方式，不存在隐藏内购误导。</div>
+    </div>
+  </div>
+
+  <div class="footnote">
+    <p>基于玩家真实口碑与编辑试玩整理 · 无推广排名 · 保持中立与克制</p>
+  </div>
+</div>
+</body>
+</html>
