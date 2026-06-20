@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杂志专题 · 爱游戏</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf9f7;
+      font-family: 'Segoe UI', 'PingFang SC', Roboto, system-ui, -apple-system, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 2.4rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 720px;
+      width: 100%;
+    }
+
+    /* 首页横幅 — 留白 + 浅底色 + 极细装饰线 */
+    .hero {
+      margin-bottom: 4rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #d8d4cf;
+    }
+
+    .hero-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #8b8179;
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 350;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #26211d;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      color: #5f5851;
+      font-size: 1rem;
+      max-width: 80%;
+      margin-top: 0.6rem;
+    }
+
+    /* 背景说明 — 小字号，窄栏 */
+    .background-note {
+      background: #f0ede9;
+      padding: 1.8rem 2rem;
+      border-radius: 0;
+      margin-bottom: 3.2rem;
+      font-size: 0.95rem;
+      color: #2a2622;
+      line-height: 1.8;
+      border-left: 3px solid #b8ada3;
+    }
+
+    .background-note strong {
+      font-weight: 500;
+      color: #1a1714;
+    }
+
+    /* 三段自然介绍 */
+    .intro-grid {
+      margin-bottom: 3.2rem;
+    }
+
+    .intro-card {
+      margin-bottom: 2.6rem;
+      padding-bottom: 2.2rem;
+      border-bottom: 1px dashed #dbd6d0;
+    }
+
+    .intro-card:last-child {
+      border-bottom: none;
+    }
+
+    .intro-card h2 {
+      font-weight: 380;
+      font-size: 1.5rem;
+      letter-spacing: -0.01em;
+      color: #2b2621;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro-card p {
+      color: #3f3a35;
+      font-size: 0.95rem;
+      max-width: 90%;
+    }
+
+    .intro-card .meta {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: #9f948a;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+      border-bottom: 1px solid #d1c8bf;
+      padding-bottom: 0.1rem;
+    }
+
+    /* 尾页访问提示 — 像杂志封底 */
+    .footer-note {
+      margin-top: 3.2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d8d4cf;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #2d2823;
+    }
+
+    .footer-note .strong-link {
+      font-weight: 430;
+    }
+
+    .footer-note a {
+      color: #1e1a16;
+      text-decoration: none;
+      border-bottom: 1px solid #b3a89e;
+      transition: border-color 0.2s;
+    }
+
+    .footer-note a:hover {
+      border-bottom-color: #1e1a16;
+    }
+
+    .footer-meta {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      color: #948b82;
+      letter-spacing: 0.02em;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.8rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        max-width: 100%;
+      }
+
+      .intro-card p {
+        max-width: 100%;
+      }
+
+      .background-note {
+        padding: 1.4rem 1.4rem;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+
+      .intro-card h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* 极简辅助 */
+    .quiet-break {
+      height: 0.4rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 首页横幅 -->
+    <div class="hero">
+      <div class="hero-label">专题 · 观察</div>
+      <h1>爱游戏</h1>
+      <p>一个不被潮流裹挟的稳定入口，关于内容、习惯与日常界面。</p>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="background-note">
+      <strong>背景 ·</strong> 从最早的个人站点时代到如今信息过载的移动界面，人们始终需要一处不慌不忙的起点。<br>
+      所谓稳定，不在于功能堆叠，而是每次打开都感到清晰与归属。<strong>爱游戏</strong> 所尝试的，正是这样一种安静而有轮廓的浏览方式。
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="intro-grid">
+      <div class="intro-card">
+        <span class="meta">01 · 入口的质地</span>
+        <h2>不被时间冲淡的起始页</h2>
+        <p>一个页面如果承载了太多跳转与弹窗，便失去了「到达」的从容。作为日常接触的第一个视觉锚点，<a href="https://official-web-ayxsports.com" style="border-bottom: 1px solid #b3a89e; text-decoration: none; color: inherit; font-weight: 430;">爱游戏</a> 选择用更少的部件与更清晰的结构来组织内容——不制造焦虑，也不打断浏览节奏。从打开到浏览，每一步都保持克制。</p>
+      </div>
+
+      <div class="intro-card">
+        <span class="meta">02 · 场景与习惯</span>
+        <h2>日常使用中的自然节奏</h2>
+        <p>无论是早晨快速浏览信息，还是午后静下来读几段文字，一个不张扬的界面能让人更专注。背景的浅暖色调、无干扰的留白、克制的字号对比，这些细节共同构成了一种可长期使用的视觉呼吸感。当你需要集中注意力时，它不会成为负担；当你只是随意看看时，它也不会催促你。</p>
+      </div>
+
+      <div class="intro-card">
+        <span class="meta">03 · 不止于设计</span>
+        <h2>作为页面，也是一种陈述</h2>
+        <p>一个站点的价值不只在于外观，更在于它如何对待每一次访问。稳定的响应速度、可靠的链接结构、以及对内容的尊重，远比花哨的动效重要。从这一页开始，<a href="https://official-web-ayxsports.com" style="border-bottom: 1px solid #b3a89e; text-decoration: none; color: inherit; font-weight: 430;">爱游戏</a> 希望建立一种长期且舒适的阅读关系——不打扰，但始终在。</p>
+      </div>
+    </div>
+
+    <!-- 尾页访问提示 -->
+    <div class="footer-note">
+      <p class="strong-link">
+        如果你恰好也在寻找一个不喧哗的起点，或许可以把它放在书签里——<a href="https://official-web-ayxsports.com">爱游戏</a> 始终在那里。
+      </p>
+      <p style="margin-top: 0.8rem; color: #4d453e;">
+        没有弹窗，没有强制跳转，只有干净的页面和一条通往内容的路。
+      </p>
+      <div class="footer-meta">
+        · 杂志专题 · 自由浏览 ·
+      </div>
+    </div>
+  </div>
+</body>
+</html>
